@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.demo.integration.CookieTests" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-10-29T03:44:28" hostname="kagiret-virtual-machine" time="1.881">
+  <properties/>
+  <testcase name="Получение печеньки по ID" classname="com.example.demo.integration.CookieTests" time="1.466"/>
+  <testcase name="Получение всех печенек" classname="com.example.demo.integration.CookieTests" time="0.145"/>
+  <testcase name="Печенька не найден по ID" classname="com.example.demo.integration.CookieTests" time="0.022"/>
+  <testcase name="Получение случайной печеньки" classname="com.example.demo.integration.CookieTests" time="0.066"/>
+  <testcase name="Успешное создание печеньки" classname="com.example.demo.integration.CookieTests" time="0.023"/>
+  <testcase name="Удаление несуществующей печеньки" classname="com.example.demo.integration.CookieTests" time="0.015"/>
+  <testcase name="Удаление печеньки по ID" classname="com.example.demo.integration.CookieTests" time="0.046"/>
+  <testcase name="Редактирование печеньки по ID" classname="com.example.demo.integration.CookieTests" time="0.054"/>
+  <testcase name="Редактирование несуществующей печеньки" classname="com.example.demo.integration.CookieTests" time="0.017"/>
+  <system-out><![CDATA[10:44:13.378 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.integration.CookieTests]: CookieTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:44:13.538 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.FortuneCookieApplication for test class com.example.demo.integration.CookieTests
+10:44:13.770 [Test worker] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2023-10-29T10:44:14.575+07:00  WARN 45258 --- [ers-lifecycle-0] o.t.d.DockerClientProviderStrategy       : DOCKER_HOST unix:///var/run/docker.sock is not listening
+2023-10-29T10:44:14.955+07:00  INFO 45258 --- [ers-lifecycle-0] o.t.d.DockerClientProviderStrategy       : Found Docker environment with Docker accessed via Unix socket (/home/kagiret/.docker/desktop/docker.sock)
+2023-10-29T10:44:14.956+07:00  INFO 45258 --- [ers-lifecycle-0] org.testcontainers.DockerClientFactory   : Docker host IP address is localhost
+2023-10-29T10:44:14.979+07:00  INFO 45258 --- [ers-lifecycle-0] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 24.0.6
+  API Version: 1.43
+  Operating System: Docker Desktop
+  Total Memory: 1909 MB
+2023-10-29T10:44:15.018+07:00  INFO 45258 --- [ers-lifecycle-0] tc.testcontainers/ryuk:0.5.1             : Creating container for image: testcontainers/ryuk:0.5.1
+2023-10-29T10:44:15.091+07:00  INFO 45258 --- [ers-lifecycle-0] o.t.utility.RegistryAuthLocator          : Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2023-10-29T10:44:15.320+07:00  INFO 45258 --- [ers-lifecycle-0] tc.testcontainers/ryuk:0.5.1             : Container testcontainers/ryuk:0.5.1 is starting: eedc73625af20537be734a34dd1c061edb33381d9b608e76e05cda8c7a8e27b5
+2023-10-29T10:44:16.152+07:00  INFO 45258 --- [ers-lifecycle-0] tc.testcontainers/ryuk:0.5.1             : Container testcontainers/ryuk:0.5.1 started in PT1.155445076S
+2023-10-29T10:44:16.163+07:00  INFO 45258 --- [ers-lifecycle-0] o.t.utility.RyukResourceReaper           : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2023-10-29T10:44:16.164+07:00  INFO 45258 --- [ers-lifecycle-0] org.testcontainers.DockerClientFactory   : Checking the system...
+2023-10-29T10:44:16.165+07:00  INFO 45258 --- [ers-lifecycle-0] org.testcontainers.DockerClientFactory   : ✔︎ Docker server version should be at least 1.6.0
+2023-10-29T10:44:16.165+07:00  INFO 45258 --- [ers-lifecycle-0] tc.postgres:12.1                         : Creating container for image: postgres:12.1
+2023-10-29T10:44:16.337+07:00  INFO 45258 --- [ers-lifecycle-0] tc.postgres:12.1                         : Container postgres:12.1 is starting: 04729001fd3f47bbc412938edc1d1b06dcbc357ba97a4caf82038cc9008eb549
+2023-10-29T10:44:23.149+07:00  INFO 45258 --- [ers-lifecycle-0] tc.postgres:12.1                         : Container postgres:12.1 started in PT6.983863723S
+2023-10-29T10:44:23.151+07:00  INFO 45258 --- [ers-lifecycle-0] tc.postgres:12.1                         : Container is started (JDBC URL: jdbc:postgresql://localhost:43665/fortune_cookies?loggerLevel=OFF)
+2023-10-29T10:44:23.165+07:00  INFO 45258 --- [    Test worker] c.example.demo.integration.CookieTests   : Starting CookieTests using Java 17.0.9 with PID 45258 (started by kagiret in /home/kagiret/Downloads/fortune-cookies)
+2023-10-29T10:44:23.167+07:00  INFO 45258 --- [    Test worker] c.example.demo.integration.CookieTests   : No active profile set, falling back to 1 default profile: "default"
+2023-10-29T10:44:23.829+07:00  INFO 45258 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-29T10:44:24.019+07:00  INFO 45258 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 183 ms. Found 1 JPA repository interfaces.
+2023-10-29T10:44:24.612+07:00  INFO 45258 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2023-10-29T10:44:24.621+07:00  INFO 45258 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-29T10:44:24.622+07:00  INFO 45258 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-29T10:44:24.738+07:00  INFO 45258 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-29T10:44:24.740+07:00  INFO 45258 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1551 ms
+2023-10-29T10:44:24.907+07:00  INFO 45258 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-10-29T10:44:24.907+07:00  INFO 45258 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-10-29T10:44:24.908+07:00  INFO 45258 --- [    Test worker] o.f.c.internal.license.VersionPrinter    : 
+2023-10-29T10:44:24.918+07:00  INFO 45258 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-29T10:44:25.055+07:00  INFO 45258 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@704d3b00
+2023-10-29T10:44:25.057+07:00  INFO 45258 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-29T10:44:25.083+07:00  INFO 45258 --- [    Test worker] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:43665/fortune_cookies (PostgreSQL 12.1)
+2023-10-29T10:44:25.147+07:00  INFO 45258 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "public"."flyway_schema_history" does not exist yet
+2023-10-29T10:44:25.160+07:00  INFO 45258 --- [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.034s)
+2023-10-29T10:44:25.192+07:00  INFO 45258 --- [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "public"."flyway_schema_history" ...
+2023-10-29T10:44:25.256+07:00  INFO 45258 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2023-10-29T10:44:25.269+07:00  INFO 45258 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "20231012131740 - cookies"
+2023-10-29T10:44:25.335+07:00  INFO 45258 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "public" to version "20231012134222 - default descriptions"
+2023-10-29T10:44:25.437+07:00  INFO 45258 --- [    Test worker] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema "public", now at version v20231012134222 (execution time 00:00.195s)
+2023-10-29T10:44:25.547+07:00  INFO 45258 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-29T10:44:25.600+07:00  INFO 45258 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-29T10:44:25.602+07:00  INFO 45258 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-29T10:44:25.782+07:00  INFO 45258 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-29T10:44:25.963+07:00  INFO 45258 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-29T10:44:26.257+07:00  INFO 45258 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-29T10:44:26.967+07:00  INFO 45258 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-29T10:44:26.973+07:00  INFO 45258 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-29T10:44:27.261+07:00  INFO 45258 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-29T10:44:27.388+07:00  WARN 45258 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-29T10:44:27.829+07:00  INFO 45258 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 37657 (http) with context path ''
+2023-10-29T10:44:27.849+07:00  INFO 45258 --- [    Test worker] c.example.demo.integration.CookieTests   : Started CookieTests in 14.044 seconds (process running for 15.569)
+2023-10-29T10:44:29.127+07:00  INFO 45258 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-29T10:44:29.127+07:00  INFO 45258 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-29T10:44:29.129+07:00  INFO 45258 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

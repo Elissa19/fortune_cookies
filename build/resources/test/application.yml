@@ -1,0 +1,19 @@
+service:
+  id: fortune-cookie-local-test
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fortune_cookies
+    username: fortune_cookies
+    password: fortune_cookies
+
+flyway:
+  url: jdbc:postgresql://localhost:5432/fortune_cookies
+  user: fortune_cookies
+  password: fortune_cookies
+  enabled: true
+  locations:
+    - 'classpath:db/migration'
+
+boredApiClient:
+  url: http://localhost:${testcontainer.wiremock.port}
+  requestTimeout: 5s
